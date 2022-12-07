@@ -1785,11 +1785,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Code\\C#\\file-browser-consol-\\FileObcerver.csproj",
+      "projectUniqueName": "D:\\Code\\C#\\obliterator\\FileObcerver.csproj",
       "projectName": "FileObcerver",
-      "projectPath": "D:\\Code\\C#\\file-browser-consol-\\FileObcerver.csproj",
+      "projectPath": "D:\\Code\\C#\\obliterator\\FileObcerver.csproj",
       "packagesPath": "C:\\Users\\5201\\.nuget\\packages\\",
-      "outputPath": "D:\\Code\\C#\\file-browser-consol-\\obj\\",
+      "outputPath": "D:\\Code\\C#\\obliterator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

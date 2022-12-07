@@ -53,14 +53,33 @@ namespace FileObcerver
             {
                 if (process.Id == indexId)
                 {
-                    Console.SetCursorPosition(Console.BufferWidth / 5 * 3 + 2, 6);
-                    Console.Write($"  Physical memory usage     : {process.WorkingSet64}");
-                    Console.SetCursorPosition(Console.BufferWidth / 5 * 3 + 2, 7);
-                    Console.Write($"  Base priority             : {process.BasePriority}");
-                    Console.SetCursorPosition(Console.BufferWidth / 5 * 3 + 2, 8);
-                    Console.Write($"  Paged system memory size  : {process.PagedSystemMemorySize64} Bytes");
-                    Console.SetCursorPosition(Console.BufferWidth / 5 * 3 + 2, 9);
-                    Console.Write($"  Paged memory size         : {process.PagedMemorySize64} Bytes");
+                    try
+                    {
+                        Console.SetCursorPosition(Console.BufferWidth / 5 * 3 + 2, 10);
+                        Console.WriteLine($"  Priority class            : {process.PriorityClass}");
+                        Console.SetCursorPosition(Console.BufferWidth / 5 * 3 + 2, 11);
+                        Console.WriteLine($"  User processor time       : {process.UserProcessorTime}");
+                        Console.SetCursorPosition(Console.BufferWidth / 5 * 3 + 2, 12);
+                        Console.WriteLine($"  Privileged processor time : {process.PrivilegedProcessorTime}");
+                        Console.SetCursorPosition(Console.BufferWidth / 5 * 3 + 2, 13);
+                        Console.WriteLine($"  Total processor time      : {process.TotalProcessorTime}");
+                    }
+                    catch (Exception exception)
+                    {
+                        Console.SetCursorPosition(0, 0);
+                        Console.WriteLine(exception.Message);
+                    }
+                    finally
+                    {
+                        Console.SetCursorPosition(Console.BufferWidth / 5 * 3 + 2, 6);
+                        Console.Write($"  Physical memory usage     : {process.WorkingSet64}");
+                        Console.SetCursorPosition(Console.BufferWidth / 5 * 3 + 2, 7);
+                        Console.Write($"  Base priority             : {process.BasePriority}");
+                        Console.SetCursorPosition(Console.BufferWidth / 5 * 3 + 2, 8);
+                        Console.Write($"  Paged system memory size  : {process.PagedSystemMemorySize64} Bytes");
+                        Console.SetCursorPosition(Console.BufferWidth / 5 * 3 + 2, 9);
+                        Console.Write($"  Paged memory size         : {process.PagedMemorySize64} Bytes");
+                    }
                 }
                 
 
@@ -79,6 +98,34 @@ namespace FileObcerver
                        process.Kill();
                     }
 
+
+                }
+            }
+            catch (Exception exception)
+            {
+                Console.SetCursorPosition(0, 0);
+                Console.WriteLine(exception.Message);
+            }
+        }
+        public static void NameObliterator(int indexId)
+        {
+            try
+            {
+                string name = "";
+                foreach (Process process in Process.GetProcesses())
+                {
+                    if (process.Id == indexId)
+                    {
+                        name = process.ProcessName;
+                    }
+
+                }
+                foreach (Process process in Process.GetProcesses())
+                {
+                    if (process.ProcessName == name)
+                    {
+                        process.Kill();
+                    }
 
                 }
             }

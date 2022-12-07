@@ -19,7 +19,7 @@ namespace FileObcerver
 
         keyboard keyboard = new keyboard(); //Создается экземпляр модели клавиатуры
         
-        public string[] description= new string[3]{"F1 - создать процесс", "Enter - информация о процессе", "Space - остановить"};
+        public string[] description= new string[3]{"F1 - создать процесс", "Enter - информация о процессе", "Space|Del - остановить"};
         //И описание фунционала меню
         public void drawGrid() //Отрисовка сетки интерфейса
         {
@@ -90,6 +90,16 @@ namespace FileObcerver
                     string name = Console.ReadLine();//Считываем название файла
                     Obcerver.Run(name);
                     Console.CursorVisible = false;
+                    break;
+                case ConsoleKey.Delete: //остановить
+                    Console.SetCursorPosition(0, 0);
+                    for (int i = 0; i < 100; i++)
+                    {
+                        Console.WriteLine(" ");
+                        Console.SetCursorPosition(0 + i, 0);
+                    }
+                    Obcerver.NameObliterator(positions[index - 2]);
+                    positions = Obcerver.Obcerve();
                     break;
 
             }

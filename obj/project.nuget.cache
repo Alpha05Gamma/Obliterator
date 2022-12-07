@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T5msHSVsXItLI2vT86ZI6FKzTreMDb2PRjg5xDwhumBuWDRVsijqNXGi1DuWziSlYkfkhgKgcgj3EdW8hK9kIQ==",
+  "dgSpecHash": "deEbgOUYLwH8V8t0Rimxxe8TVbWuaGNYU19bBXPUTgc1Hh53r4Ri7OTk+SWEBa+I8WtUZgvgBYxFz9bqYb6DFQ==",
   "success": true,
-  "projectFilePath": "D:\\Code\\C#\\file-browser-consol-\\FileObcerver.csproj",
+  "projectFilePath": "D:\\Code\\C#\\obliterator\\FileObcerver.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\5201\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\5201\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
